@@ -45,4 +45,9 @@ LOAD DATA LOCAL INPATH 'data1.csv' INTO TABLE tbl1;
 /*
     >>> Escriba su respuesta a partir de este punto <<<
 */
-
+INSERT OVERWRITE DIRECTORY 'output'
+SELECT
+concat_ws(':',collect_list(upper(exploded)))
+FROM
+tbl0 LATERAL VIEW explode(c5) exploded_table AS exploded
+GROUP BY c1;
