@@ -45,4 +45,5 @@ LOAD DATA LOCAL INPATH 'data1.csv' INTO TABLE tbl1;
     >>> Escriba su respuesta a partir de este punto <<<
 */
 INSERT OVERWRITE DIRECTORY 'output'
-SELECT DISTINCT c5 FROM tbl0 LATERAL VIEW EXPLODE (c5) e5 AS c5;
+SELECT DISTINCT c5_1 FROM tbl0 
+                        LATERAL VIEW EXPLODE (c5) e5 AS c5_1;
