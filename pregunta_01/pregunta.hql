@@ -1,4 +1,4 @@
-/* 
+/*
 Pregunta
 ===========================================================================
 
@@ -18,7 +18,7 @@ DROP TABLE IF EXISTS datos;
 
 CREATE TABLE datos (letra STRING, fecha STRING, cantidad INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
 
-LOAD DATA INPATH 'data.tsv' OVERWRITE INTO TABLE datos;
+LOAD DATA LOCAL INPATH "data.tsv" OVERWRITE INTO TABLE datos;
 
 INSERT OVERWRITE DIRECTORY 'output'
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
