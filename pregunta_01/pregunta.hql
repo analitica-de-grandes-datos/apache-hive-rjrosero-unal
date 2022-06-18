@@ -1,5 +1,4 @@
-/*
-Pregunta
+/*Pregunta
 ===========================================================================
 
 Para resolver esta pregunta use el archivo `data.tsv`.
